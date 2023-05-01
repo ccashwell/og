@@ -69,7 +69,7 @@ export default async function handler(req: NextRequest) {
               style={{ margin: 0 }}
               tw={clsx('text-2xl font-normal text-gray-300')}
             >
-              theodorusclarence.com/blog
+              blog.firechain.io
             </h3>
             <h1 tw={clsx('mt-0', 'text-4xl leading-tight font-normal')}>
               <span
