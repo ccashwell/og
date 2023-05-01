@@ -94,7 +94,7 @@ export default function BuildPage() {
                     <Input
                       id='logo'
                       label='Logo Links'
-                      helperText={`default: ${deploymentURL}/images/logo.jpg`}
+                      helperText={`default: ${deploymentURL}/images/firechain-mark.png`}
                     />
                     <Input
                       id='banner'

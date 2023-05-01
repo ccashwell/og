@@ -36,7 +36,7 @@ export default async function handler(req: NextRequest) {
     siteName: siteName ?? 'Site Name',
     description: description ?? 'Description',
     theme: theme ?? 'dark',
-    logo: logo ?? `${deploymentURL}/images/logo.jpg`,
+    logo: logo ?? `${deploymentURL}/images/firechain-mark.png`,
     templateTitle,
     logoWidth: logoWidth ? +logoWidth : 100,
     logoHeight: logoHeight ? +logoHeight : undefined,
@@ -85,7 +85,7 @@ export default async function handler(req: NextRequest) {
               <span
                 style={
                   {
-                    backgroundImage: 'linear-gradient(90deg, #00e887, #00e0f3)',
+                    backgroundImage: 'linear-gradient(90deg, #EF4444, #FB923C)',
                     backgroundClip: 'text',
                     '-webkit-background-clip': 'text',
                     color: 'transparent',

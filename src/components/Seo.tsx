@@ -10,7 +10,7 @@ const defaultMeta = {
   siteName: 'Open Graph Generator',
   description: 'Generates Open Graph images, instantly.',
   url: deploymentURL,
-  image: `${deploymentURL}/images/logo.jpg`,
+  image: `${deploymentURL}/images/firechain-mark.png`,
   type: 'website',
   robots: 'follow, index',
 };

@@ -4,12 +4,12 @@ import clsx from 'clsx';
 import { NextRequest } from 'next/server';
 import { CSSProperties } from 'react';
 
-export const inter400 = fetch(
-  new URL('../../assets/Inter-Regular.ttf', import.meta.url)
+export const quicksand400 = fetch(
+  new URL('../../assets/Quicksand-Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export const inter500 = fetch(
-  new URL('../../assets/Inter-Medium.ttf', import.meta.url)
+export const quicksand500 = fetch(
+  new URL('../../assets/Quicksand-Medium.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export const config = {
@@ -17,8 +17,8 @@ export const config = {
 };
 
 export default async function handler(req: NextRequest) {
-  const interRegular = await inter400;
-  const interMedium = await inter500;
+  const quicksandRegular = await quicksand400;
+  const quicksandMedium = await quicksand500;
 
   const { searchParams } = new URL(req.url);
 
@@ -36,7 +36,7 @@ export default async function handler(req: NextRequest) {
         style={{
           height: '100%',
           width: '100%',
-          fontFamily: 'Inter',
+          fontFamily: 'Quicksand',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -75,7 +75,7 @@ export default async function handler(req: NextRequest) {
               <span
                 style={
                   {
-                    backgroundImage: 'linear-gradient(90deg, #00e887, #00e0f3)',
+                    backgroundImage: 'linear-gradient(90deg, #EF4444, #FB923C)',
                     backgroundClip: 'text',
                     '-webkit-background-clip': 'text',
                     color: 'transparent',
@@ -98,8 +98,8 @@ export default async function handler(req: NextRequest) {
             >
               <img
                 tw='w-[80px] rounded-full'
-                src='https://res.cloudinary.com/theodorusclarence/image/upload/c_fill,g_auto:face,h_160,w_160/v1673957822/theodorusclarence/about/self-3_square_jtiwai.jpg'
-                alt='Photo of me'
+                src='https://og.firechain.io/images/firechain-mark.png'
+                alt='Logo'
               />
               <div
                 style={{
@@ -112,10 +112,10 @@ export default async function handler(req: NextRequest) {
                   style={{ margin: 0 }}
                   tw='font-medium text-[1.6rem] mt-0 text-white'
                 >
-                  Theodorus Clarence
+                  Firechain Labs
                 </p>
                 <p style={{ margin: 0 }} tw='text-xl mt-0 text-gray-300'>
-                  @th_clarence
+                  @firechain
                 </p>
               </div>
             </div>
@@ -135,13 +135,13 @@ export default async function handler(req: NextRequest) {
       emoji: 'twemoji',
       fonts: [
         {
-          name: 'Inter',
-          data: interRegular,
+          name: 'Quicksand',
+          data: quicksandRegular,
           weight: 400,
         },
         {
-          name: 'Inter',
-          data: interMedium,
+          name: 'Quicksand',
+          data: quicksandMedium,
           weight: 500,
         },
       ],

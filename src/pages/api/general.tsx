@@ -35,7 +35,7 @@ export default async function handler(req: NextRequest) {
     siteName: siteName ?? 'Site Name',
     description: description ?? 'Description',
     theme: theme ?? 'dark',
-    logo: logo ?? `${deploymentURL}/images/logo.jpg`,
+    logo: logo ?? `${deploymentURL}/images/firechain-mark.png`,
     templateTitle,
     logoWidth: logoWidth ? +logoWidth : 100,
     logoHeight: logoHeight ? +logoHeight : undefined,
