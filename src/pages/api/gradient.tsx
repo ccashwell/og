@@ -6,12 +6,12 @@ import { CSSProperties } from 'react';
 
 import { deploymentURL } from '@/constant/env';
 
-export const inter400 = fetch(
-  new URL('../../assets/Inter-Regular.ttf', import.meta.url)
+export const quicksand400 = fetch(
+  new URL('../../assets/Quicksand-Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export const inter700 = fetch(
-  new URL('../../assets/Inter-Bold.ttf', import.meta.url)
+export const quicksand700 = fetch(
+  new URL('../../assets/Quicksand-Bold.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export const config = {
@@ -19,8 +19,8 @@ export const config = {
 };
 
 export default async function handler(req: NextRequest) {
-  const interRegular = await inter400;
-  const interBold = await inter700;
+  const quicksandRegular = await quicksand400;
+  const quicksandBold = await quicksand700;
 
   const { searchParams } = new URL(req.url);
 
@@ -48,7 +48,7 @@ export default async function handler(req: NextRequest) {
         style={{
           height: '100%',
           width: '100%',
-          fontFamily: 'Inter',
+          fontFamily: 'Quicksand',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -144,13 +144,13 @@ export default async function handler(req: NextRequest) {
       emoji: 'twemoji',
       fonts: [
         {
-          name: 'Inter',
-          data: interRegular,
+          name: 'Quicksand',
+          data: quicksandRegular,
           weight: 400,
         },
         {
-          name: 'Inter',
-          data: interBold,
+          name: 'Quicksand',
+          data: quicksandBold,
           weight: 700,
         },
       ],
